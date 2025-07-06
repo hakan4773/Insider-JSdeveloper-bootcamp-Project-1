@@ -1,0 +1,441 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: white
+}
+
+header {
+  background-color: rgba(15, 32, 39, 0.95); 
+    padding: 10px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.checkbtn {
+ font-size: 1.5rem;
+ color: white;
+ cursor: pointer;
+ display: none;
+}
+#check {
+  display: none;
+}
+.nav-menu {
+  display: flex;
+  gap: 2rem;
+}
+.nav-menu a {
+ color: #fff;
+ padding: 1rem 1.5rem;
+ display: block;
+ text-decoration: none;
+}
+.nav-menu a:hover {
+ color: #729ebb;
+}
+
+
+h1 {
+    font-size: 2.5rem;
+    margin: 1.2rem; 
+
+}
+
+
+
+
+/* dizi tanıtımı ve resim */
+
+.movie-section {
+ position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: brightness(0.7);
+}
+.movie-info{
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+  max-width: 700px;
+  backdrop-filter: blur;
+  padding: 2rem;
+  border-radius: 8px;
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+.movie-info div {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.movie-info  p {
+   font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  text-align: justify;
+  
+}
+.movie-section h1 {
+  position: absolute;
+  top: 0%;
+  left: 25%;
+  transform: translateX(-50%);
+  color: #fff;
+  font-size: 4rem;
+  text-align: center;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
+  width: 100%;
+  z-index: 2;
+}
+
+ button {
+    position: absolute;
+    top:1%;
+    right: 1%;
+    background-color: rgb(197, 22, 66);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 7px;
+    cursor: pointer;
+    font-size:1.2rem;
+    z-index: 20;
+}
+button:hover {
+transform: scale(1.05);
+transition: 0.3s ease ;
+} 
+
+/* dizi Karakterleri */
+.movie-character {
+    border-radius: 10px;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    
+}
+.character-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+.movie-character h2 {
+    font-size: 1.5rem;
+    margin: 1.2rem;
+    color: white;
+    border-bottom: 4px solid rgb(8, 84, 114);
+    
+}
+.movie-character img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-right: 1rem;
+    object-fit: cover;
+    border: 2px solid #ccc;
+    margin: 10px;
+}
+.character-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.movie-character p {
+    font-size: 1rem;
+    max-width: 250px;
+    line-height: 1.4;
+    color: rgb(214, 210, 210);
+   
+}
+.movie-character strong {
+    font-size: 1.2rem;
+    color: white;
+}
+.movie-character span {
+    color: rgba(129, 138, 141, 0.95);
+}
+
+/* dizi Videosu */
+.movie-video  {
+    display: flex;
+    flex-direction: column;
+
+    margin-top: 2rem;
+   
+}
+.video-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+    text-align: center;
+}
+.movie-video iframe {
+    width: 100%;
+    max-width: 800px;
+    height: 400px;
+    margin-bottom: 1rem;
+}
+
+.movie-video  h2 {
+    font-size: 1.5rem;
+    margin: 2rem; 
+    padding: 0 10px;
+    border-left: 4px solid rgb(8, 84, 114);
+
+}
+
+
+
+
+/* Favori Sahnem*/
+.favorite-scene {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 2rem;
+    margin: 2rem auto;
+    max-width: 800px;
+    border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  
+}
+
+
+.favorite-scene h3 {
+   color: white;
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+      border-left: 6px solid #00a8ff;
+
+}
+
+.favorite-scene p {
+    line-height: 1.6;
+    text-align: justify;
+    color: rgb(214, 210, 210);
+}
+.favorite-scene a {
+  color: #00a8ff;
+  font-weight: bold;
+  text-decoration: none;
+}
+.favorite-scene a:hover {
+  color: #0077b6;
+  text-decoration: underline;
+}
+
+/* Bölümler */
+.episodes-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;  
+    background-color: #0f2027;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+
+}
+.episodes-container h1 {
+    padding: 0 10px;
+    border-left: 4px solid rgb(8, 84, 114);
+    font-size: 2rem;
+    
+}
+.episode-list {
+    display: flex;
+    flex-direction: column;
+}
+.episode-card {
+    width: 100%;
+    color: white;
+    padding: 1rem;
+    display: flex;
+    gap: 20px;
+    
+}
+.episode-image img {
+    width: 200px;
+    height: 150px;
+    border-radius: 8px;
+}
+.episode-card h2{
+    font-size: 1.5rem;
+    margin: 0;
+    color: #f0e5e5;
+}
+.episode-info {
+    font-size: 0.9rem;
+    color: #807a7a;
+}
+
+
+/* about */
+.about-section {
+   padding: 1rem;
+    margin: 0 auto;
+   
+}
+.about-container {
+   border-top: 2px solid #ddd;
+   background-color: #0f2027;
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+
+}
+#about h2 {
+  font-size: 2.5rem;
+  color: #e6e0e0;
+  margin-bottom: 20px;
+  padding: 0 10px;
+  position: relative;
+  display: inline-block;
+    border-left: 4px solid rgb(8, 84, 114);
+
+}
+#about h3 {
+  color: #f8f0f0;
+  
+
+}
+#about p {
+  font-size: 1rem;
+  margin: 10px auto;
+  line-height: 1.6;
+}
+
+.contact-link  {
+  font-size: 2.2rem;
+  color: #00a8ff;
+  text-decoration: none;
+  font-weight: bold;
+  margin-left: 20px;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.contact-link :hover {
+  color: #8fc8ee;
+  transition: 2s ease;
+  transform: rotate(360deg);
+}
+
+
+
+
+
+
+/* footer */
+footer {
+    background-color: rgba(15, 32, 39, 0.95); 
+    padding: 10px;
+    text-align: center;
+}
+
+footer p {
+    color: #e1e1e1;
+    font-size: 14px;
+}
+
+/* mobil görünüm */
+
+
+@media only screen and (max-width: 768px) {
+
+.movie-video iframe {
+    width: 90%;
+}
+.movie-section h1 {
+    font-size: 1.5rem;
+    top: 10%;
+    left: 25%;
+  }
+  
+  .movie-info {
+  transform: translate(-50%, -65%);
+
+    width: 90%;
+    padding: 1.5rem;
+  }
+  .movie-info div {
+    grid-template-columns: 1fr;
+  }
+  .movie-info p{
+    font-size: 15px;
+    line-height: 1;
+    gap: 5px;
+    margin: 0;
+  }
+
+
+.episode-card {
+    flex-wrap: wrap;
+    
+}
+.episode-image img{
+    width: 100%;
+    height: auto;
+}
+
+.favorite-scene {
+    margin: 10px;
+}
+.favorite-scene h3{
+    font-size: 1.3rem;
+}
+.episodes-container {
+  margin:10px ;
+}
+ .checkbtn {
+ display: block;
+ font-size: 2rem;
+ }
+header {
+    justify-content: start;
+    align-items: start;
+    text-align: start;
+}
+ .nav-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    background: #222831;
+    z-index: 50;
+  }
+
+   #check:checked ~ .nav-menu {
+    display: flex;
+  }
+.nav-menu  {
+    gap: 0;
+ }
+ .nav-menu a:hover {
+    background-color: #555;
+}
+}
